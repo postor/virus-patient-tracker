@@ -6,11 +6,11 @@ WORKDIR /app
 
 COPY package*.json ./
 
-RUN npm ci 
+RUN npm i 
 
 COPY . .
 
-RUN npm run build && build:web:prod && npm prune --production
+RUN npm run build && npm run build:web:prod && npm prune --production
 
 ENV NODE_ENV=production
 CMD ["npm", "start"]
