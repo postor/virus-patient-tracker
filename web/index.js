@@ -27,8 +27,10 @@ const App = () => {
   const { data, methods } = useContext(context);
   useEffect(() => {
     (async () => {
+      methods.setPoints([]);
       const posArr = await poses(data.user);
       methods.setPoints(posArr);
+      methods.setRelatedUsers({});
       const overlapPos = await overlaps(data.user, posArr);
       methods.setRelatedUsers(groupOverlaps(overlapPos));
     })();

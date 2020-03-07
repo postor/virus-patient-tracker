@@ -2,7 +2,7 @@ import { users } from "../libs/user";
 import { poses } from "../libs/pos";
 import { context } from "../store";
 import React, { useState, useEffect, useContext } from "react";
-import { Icon, List, Dropdown } from "semantic-ui-react";
+import { Icon, List, Dropdown, Message } from "semantic-ui-react";
 
 export default () => {
   const [userlist, setUserlist] = useState([]);
@@ -34,5 +34,12 @@ export default () => {
       <List.Content header={user} description={`${relatedUsers[user].length} 个潜在接触点`} />
     </List.Item>))}
     </List>
+
+    <Message info>
+      <Message.Header>判定规则</Message.Header>
+      <p>1. 上报间隔 2 分钟内</p>
+      <p>2. 上报位置 400 米内</p>
+      <p>同时满足以上两点判定为接触点，修改规则参考 services/location.service.ts</p>
+    </Message>
   </div>);
 };

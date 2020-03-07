@@ -4,7 +4,7 @@ services:
   api:
     build:
       context: .
-    image: route-overlap
+    image: virus-patient-tracker
     env_file: docker-compose.env
     environment:
       SERVICES: api
@@ -26,7 +26,7 @@ services:
   location:
     build:
       context: .
-    image: route-overlap
+    image: virus-patient-tracker
     env_file: docker-compose.env
     environment:
       SERVICES: location
