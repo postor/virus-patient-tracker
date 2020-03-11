@@ -14,8 +14,8 @@ const FormExampleForm = () => {
   }, []);
   return (<Form>
     <Form.Field>
-      <label>用户名</label>
-      <input placeholder='用户名' value={data.user}
+      <label>User Name</label>
+      <input placeholder='user name' value={data.user}
         onChange={async e => {
           methods.setUser(e.target.value);
           const res = await poses(e.target.value);
@@ -23,14 +23,14 @@ const FormExampleForm = () => {
         }} />
     </Form.Field>
     <Form.Field>
-      <label>上报时间</label>
-      <DateTimeInput placeholder='上报时间' value={data.date}
+      <label>Report Time</label>
+      <DateTimeInput placeholder='report time' value={data.date}
         dateTimeFormat="YYYY-MM-DD HH:mm:ss"
         onChange={(e, { value }) => methods.setDate(value)} />
     </Form.Field>
     <Message info>
-      <Message.Header>模拟上报</Message.Header>
-      <p>在左侧地图上点击即可上报</p>
+      <Message.Header>How To Report?</Message.Header>
+      <p>Click on the map to the left!</p>
     </Message>
   </Form>);
 };

@@ -1,16 +1,16 @@
 # virus-patient-tracker
 
-追踪病毒传播的方案
+a solution to track people a patient contacted with
 
 ## devlopment
 
-启动微服务
+start microservice with hot reload
 
 ```
-npm run dev
+cross-env ELASTIC_SEARCH=your_elastic npm run dev
 ```
 
-启动 webpack 并监听
+start webpack and listen
 
 ```
 npm run build:web:dev 

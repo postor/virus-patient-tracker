@@ -17,9 +17,9 @@ const App = () => {
   const [addMode, setAddMode] = useState(false);
   const [addModeOptions, setAddModeOptions] = useState({ date: new Date(), user: "张三" });
   const panes = [
-    { menuItem: "用户列表", render: () => <Tab.Pane><Users /></Tab.Pane> },
+    { menuItem: "User List", render: () => <Tab.Pane><Users /></Tab.Pane> },
     {
-      menuItem: "模拟上报", render: () => <Tab.Pane>
+      menuItem: "Mimic Report", render: () => <Tab.Pane>
         <AddRoute opts={addModeOptions} setOpts={setAddModeOptions} />
       </Tab.Pane>,
     },

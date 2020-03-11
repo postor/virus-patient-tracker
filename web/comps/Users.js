@@ -31,15 +31,15 @@ export default () => {
       key={user}
     >
       <Icon name='user'></Icon>
-      <List.Content header={user} description={`${relatedUsers[user].length} 个潜在接触点`} />
+      <List.Content header={user} description={`${relatedUsers[user].length} contact points`} />
     </List.Item>))}
     </List>
 
     <Message info>
-      <Message.Header>判定规则</Message.Header>
-      <p>1. 上报间隔 2 分钟内</p>
-      <p>2. 上报位置 400 米内</p>
-      <p>同时满足以上两点判定为接触点，修改规则参考 services/location.service.ts</p>
+      <Message.Header>Rules</Message.Header>
+      <p>1. diff between two reports less than 2 min</p>
+      <p>2. distance between two reports less than 400 meter</p>
+      <p>one contact point if both meet, refer services/location.service.ts to change rules</p>
     </Message>
   </div>);
 };
